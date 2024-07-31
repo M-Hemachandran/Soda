@@ -1,6 +1,6 @@
 data_source snowflake:  
     type: snowflake
-    account: cl31586.central-india.azure
+    account: ka48442.ap-south-1.aws
     username: Hemachandran07
     password: es5817@Expleo
     role: accountadmin
