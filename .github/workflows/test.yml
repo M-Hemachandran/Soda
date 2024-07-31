@@ -1,0 +1,24 @@
+name: Scan for data quality
+
+on: pull_request
+
+jobs:
+  soda_scan:
+    runs-on: ubuntu-latest
+    name: Run Soda Scan
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Perform Soda Scan
+        uses: sodadata/soda-github-action@v1.0.2
+        with:
+          soda_library_version: v1.5.5
+          data_source: dbsource
+          configuration: ./configuration.yml
+          checks: ./checks.yml
+        env:
+          SODA_CLOUD_API_KEY: 3f32c303-54d7-468a-835e-8248ec1739cd
+          SODA_CLOUD_API_SECRET: -JWZB35t251nhyZehaRVVbu9DHhz8DtTSyDVsO8RbOSvy9RZWr9MtQ
+          SNOWFLAKE_USERNAME: Hemachandran07
+          SNOWFLAKE_PASSWORD: es5817@Expleo
