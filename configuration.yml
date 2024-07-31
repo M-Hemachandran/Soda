@@ -1,4 +1,4 @@
-data_source dbsource:  
+data_source snowflake:  
     type: snowflake
     account: cl31586.central-india.azure
     username: Hemachandran07
